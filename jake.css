@@ -1,0 +1,58 @@
+body {
+  padding: 30px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.octocat {
+  border-bottom: 1px solid #CACACA;
+  width: 445px;
+  display: inline-block;
+  margin: 0 0 30px 26px;
+}
+
+.octocat:first-child {
+  margin-left: 0;
+}
+
+.octocat > a > img {
+  width: 445px;
+  border: solid 1px #CACACA;
+}
+
+.authors,
+.image-caption {
+  display: inline-block;
+}
+
+.image-footer {
+  padding: 10px;
+}
+
+.image-number {
+  margin-top: 10px;
+  color: #CACACA;
+}
+
+.image-number::before {
+  content: "#";
+}
+
+.image-caption {
+  float: right;
+}
+
+.image-caption * {
+  vertical-align: middle;
+}
+
+.authors img {
+  width: 30px;
+}
+
+li {
+  list-style: none;
+}

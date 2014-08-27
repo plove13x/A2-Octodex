@@ -1,0 +1,61 @@
+li.octocat {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+li.octocat > a > img {
+  width: 445px;
+  border: 1px silver solid;
+  padding: 5px;
+}
+
+div.image-footer {                        /*CORRECT?*/
+  border-bottom: 1px silver solid;
+  padding: 10px 0px 10px 0px;
+  font-weight: bold;
+  position: relative;
+  vertical-align: middle;
+}
+
+div.image-footer a {
+  text-decoration: none;
+  color: black;
+  font-family: helvetica, sans serif;
+}
+
+span.image-number::before {
+  content: "#";
+}
+
+span.image-number {
+  color: silver;
+}
+
+span {
+  color: gray;
+  font-family: helvetica, sans-serif;
+}
+
+div.image-caption {      /*CORRECT?*/
+  float: right;
+}
+
+
+ul.authors {             /*CORRECT? SEEMS VERY MESSY...*/
+  list-style: none;
+  padding: 0px;
+  margin-left: 8px;
+  float: right;
+  display: inline-block;
+  position: relative;
+  bottom: 24px;
+}
+
+ul.authors li img {     /*HOW DO YOU KNOW WHETHER TO PUT POSITIONING STUFF IN THE UL.AUTHORS ABOVE LIKE I DID OR IN SOMETHING EVEN MORE SPECIFIC LIKE THIS?*/
+
+  width: 30px;
+  border: 1px solid clear;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
