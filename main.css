@@ -4,23 +4,30 @@ li.octocat {
 }
 
 li.octocat > a > img {
-  width: 445px;
+  width: 400px;
   border: 1px silver solid;
-  padding: 5px;
-}
-
-div.image-footer {                        /*CORRECT?*/
-  border-bottom: 1px silver solid;
-  padding: 10px 0px 10px 0px;
-  font-weight: bold;
+  /*padding: 5px;*/
   position: relative;
-  vertical-align: middle;
 }
 
-div.image-footer a {
-  text-decoration: none;
-  color: black;
-  font-family: helvetica, sans serif;
+.octocat a.first-child::after {
+        content:" ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 8px;
+        border-color: #cacaca transparent transparent transparent;
+        /*position: relative;
+        bottom: -8px;
+        right: 5px;*/
+}
+
+div.image-footer {                   
+  border-bottom: 1px silver solid;
+  padding: 0;
+  font-weight: bold;
+  height: 50px;
+  position: relative;
 }
 
 span.image-number::before {
@@ -29,33 +36,45 @@ span.image-number::before {
 
 span.image-number {
   color: silver;
+  position: absolute;
+  top: 15px;
+  /*vertical-align: top;*/
 }
 
-span {
+.image-caption {    
+  display: inline-block;
+  float: right;
+}
+
+span.byline {
   color: gray;
   font-family: helvetica, sans-serif;
 }
 
-div.image-caption {      /*CORRECT?*/
-  float: right;
+.image-caption a {
+  /*vertical-align: top;*/
+  text-decoration: none;
+  color: black;
+  font-family: helvetica, sans serif;
 }
 
-
-ul.authors {             /*CORRECT? SEEMS VERY MESSY...*/
+ul.authors {             
   list-style: none;
   padding: 0px;
-  margin-left: 8px;
-  float: right;
   display: inline-block;
-  position: relative;
-  bottom: 24px;
 }
 
-ul.authors li img {     /*HOW DO YOU KNOW WHETHER TO PUT POSITIONING STUFF IN THE UL.AUTHORS ABOVE LIKE I DID OR IN SOMETHING EVEN MORE SPECIFIC LIKE THIS?*/
+.authors li {
+  display: inline;
+}
 
+.authors img { 
+  position: relative;
+  top: 8px;
   width: 30px;
-  border: 1px solid clear;
+  height: 30px; 
+  outline: 1px solid clear;
+  border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  border-radius: 2px;
 }
